@@ -567,6 +567,73 @@ font-weight: 700;
   position: relative;
   align-items: end;
  }
+ .secarchAddress .manBox.open{
+   display: none !important;
+ }
+ .secarchAddress .manBox .direc.open::after{
+   display: none !important;
+ }
+ .secarchAddress .firstMainBox .direc.open2::after{
+   bottom: -31.5%;
+ }
+ .secarchAddress .firstMainBox .direc.open3.open2::after{
+   bottom: -32.5%;
+   
+ }
+ .secarchAddress .manBox2 .direc.open2::after,.secarchAddress .manBox3 .direc.open2::after{
+   display: none !important;
+ }
+ .secarchAddress .manBox2.open2,.secarchAddress .manBox3.open2,.secarchAddress .manBox3.open4{
+   display: none !important;
+ }
+ .secarchAddress .manBox2 .direc.open2::after,
+  .secarchAddress .manBox3 .direc.open2::after,
+  .secarchAddress .manBox3 .direc.open3::after,
+  .secarchAddress .manBox3 .direc.open4::after
+  
+  {
+   display: none !important;
+ }
+
+ .secarchAddress .manBox2 .dircgreen.open3::after{
+ display: none !important;
+}
+ .secarchAddress .firstMainBox .direc.open3::after{
+   bottom: -15%;
+   
+}
+.secarchAddress .secondMainBox .direc.open4.open3::after{
+   top: 41%;
+   height: 45%;
+}
+ .secarchAddress .firstMainBox .direc.open4::after{
+   bottom: -13%;
+   
+}
+ .secarchAddress .firstMainBox .direc.open i, .secarchAddress .secondMainBox .direc.open2 i,.secarchAddress .secondMainBox2 .direc.open3 i,
+ .secarchAddress .secondMainBox3 .direc.open4 i
+ {
+transform: rotate(90deg);
+ }
+ .secarchAddress .manBox3.open3{
+   display: none !important;
+ }
+ .secarchAddress .manBox3 .direc.open3::after{
+   display: none !important;
+ }
+ .secarchAddress .secondMainBox .direc.open3::after{
+   top: 41.5%;
+   height: 44%;
+}
+ .secarchAddress .secondMainBox .direc.open4::after{
+   top: 33.5%;
+   height: 35%;
+
+}
+.secarchAddress .manBox2 .dircgreen.open4::after{
+   top: 74.5%;
+   height: 100%;
+  }
  .secarchAddress .manBox{
    display: flex;
    justify-content: end;

@@ -181,3 +181,117 @@ charthover.forEach(element => {
   console.log(e.target.offsetLeft)
  })
 });
+
+
+
+// expand
+
+const mainbox=document.querySelectorAll(".secarchAddress .manBox")
+
+
+const toggle = ()=>{
+ 
+  mainbox.forEach((ele,i)=>{
+    
+    if(ele.classList.contains("firstMainBox")){
+      ele.children[0].classList.toggle("open")
+    }
+    if(!ele.classList.contains("firstMainBox")){
+      // console.log(ele)
+     ele.classList.toggle("open")
+    
+    }
+     
+  
+  
+  })
+}
+
+const toggle1 = ()=>{
+ 
+  mainbox.forEach((ele,i)=>{
+    if(ele.classList.contains("firstMainBox")){
+      console.log(ele.children[0].classList)
+      if(ele.children[0].classList.contains("open2") &&ele.children[0].classList.contains("open3")){
+        console.log("hel")
+      }
+    }
+   
+  if(ele.classList.contains("secondMainBox")){
+    ele.children[0].classList.toggle("open2")
+  }
+  if(ele.classList.contains("firstMainBox")){
+    ele.children[0].classList.toggle("open2")
+    // ele.children[0].classList.toggle("open")
+  }
+    if(!ele.classList.contains("secondMainBox")&&!ele.classList.contains("firstMainBox")){
+      // console.log(ele)
+     ele.classList.toggle("open2")
+    }
+  
+    
+  
+  })
+}
+const toggle2 = ()=>{
+ 
+  mainbox.forEach((ele,i)=>{
+ 
+  if(ele.classList.contains("secondMainBox2")){
+    ele.children[0].classList.toggle("open3")
+    // console.log(ele.children[0])
+  }
+  if(ele.classList.contains("secondMainBox")){
+    ele.children[0].classList.toggle("open3")
+  }
+  if(ele.classList.contains("firstMainBox")){
+    ele.children[0].classList.toggle("open3")
+   
+  }
+
+    if(!ele.classList.contains("secondMainBox2")){
+  
+     ele.classList.toggle("open3")
+    }
+  
+    
+  
+  })
+}
+const toggle3 = ()=>{
+ 
+  mainbox.forEach((ele,i)=>{
+ 
+  if(ele.classList.contains("secondMainBox")){
+    ele.children[0].classList.toggle("open4")
+    console.log(ele.children[0])
+  }
+  if(ele.classList.contains("secondMainBox2")){
+    ele.children[0].classList.toggle("open4")
+  }
+  if(ele.classList.contains("firstMainBox")){
+    ele.children[0].classList.toggle("open4")
+   
+  }
+  if(ele.classList.contains("secondMainBox3")){
+    ele.children[0].classList.toggle("open4")
+   
+  }
+
+    if(!ele.classList.contains("secondMainBox3")&&!ele.classList.contains("firstMainBox")&&!ele.classList.contains("manBox2")){
+  
+     ele.classList.toggle("open4")
+    }
+  
+    
+  
+  })
+}
+mainbox[0].addEventListener("click",toggle)
+mainbox[1].addEventListener("click",toggle1)
+mainbox[3].addEventListener("click",toggle2)
+mainbox[4].addEventListener("click",toggle3)
+// console.log(mainbox)
+
+
+

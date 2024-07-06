@@ -1,123 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> -->
-      </head>
-      <style>
-        * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    :root {
+    font-size: 14px;
 }
 
-html {
-  font-size: 1vw;
-}
-
-body {
-  padding: 2rem;
-  font-family: "Roboto";
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  background: #f2f2f2;
-  font-family: "Roboto";
-}
-
-.progress-section {
-  width: 100%;
-  max-width: 65vw;
-  border-radius: 40px;
-  background: #ffffff;
-  padding: 1rem 2rem;
-  margin: 0 auto;
-  box-shadow: 0px 1px 10px 0px #0000001f;
-}
-
-.progress-section img {
-  width: 300px;
-  display: block;
-  margin: 20px auto;
-}
-
-.progress-section .title {
-  font-weight: 700;
-  font-size: 3rem;
-  text-transform: uppercase;
-  text-align: center;
-  padding-bottom: 20px;
-}
-
-.progress-section .task-progress {
-  margin: 1.5rem 0;
-}
-
-.progress-section .task-progress p {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #525252;
-  font-size: 3rem;
-}
-
-.progress-section span {
-  color: #525252;
-}
-
-.progress-section .progress {
-  width: 100%;
-  -webkit-appearance: none;
-  appearance: none;
-  border: none;
-  border-radius: 10px;
-  height: 1rem;
-}
-
-.progress-section .progress::-webkit-progress-bar {
-  background-color: #f0f0f0;
-}
-
-.progress-section .progress::-webkit-progress-bar,
-.progress-section .progress::-webkit-progress-value {
-  border-radius: 100px;
-}
-
-.progress-section .progress::-moz-progress-bar {
-  border-radius: 100px;
-}
-
-.progress-section .progress1::-webkit-progress-value {
-  background: #185ee2;
-}
-
-.progress-section .progress2::-webkit-progress-value {
-  background: #ffb453;
-}
-
-.progress-section .progress3::-webkit-progress-value {
-  background: #18e23c;
-}
-      </style>
+.tree-view {
+    position: relative;
     
+    display: flex;
+    flex-direction: column;
+    
+    width: max-content;
+    
+    font-size: 1.25rem;
+    
+    padding-left: 1rem;
+    
+    user-select: none;
+}
+
+.branch-node {
+    position: relative;
+    
+    padding-left: 2rem;
+    
+    cursor: pointer;
+}
+
+.branch-node::before, .branches > ::before {
+    content: "";
+    
+    position: absolute;
+    
+    left: -0.5rem;
+    top: 1.5rem;
+    
+    width: 3rem;
+    
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+}
+
+.branch-node:not(:last-child)::before, .branches > :not(:last-child)::before {
+    height: 100%;
+}
+
+.branch-node:last-child::before, .branches > :last-child::before {
+    border-top: 0;
+    border-bottom: 2px solid black;
+}
+
+:not(.tree-view) > .branch-node:first-child::after, .branches > :first-child::after {
+    content: "";
+    
+    position: absolute;
+    
+    left: -0.5rem;
+    top: -1.5rem;
+    
+    height: 3rem;
+    
+    border-left: 2px solid black;
+}
+
+.branch-title {
+    position: relative;
+    
+    display: list-item;
+    list-style: none;
+    
+    width: max-content;
+    height: 3rem;
+    line-height: 3rem;
+    
+    padding-left: 3rem;
+    padding-right: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.branch-title::before {
+    content: "►";
+    
+    position: absolute;
+    
+    left: 1rem;
+    
+    margin-right: 1rem;    
+}
+
+.branch-node.open > .branch-title::before {
+    transform: rotate(90deg);
+}
+
+.branch-node.open > .branches {
+    display: initial;
+}
+
+.branches {
+    display: none;
+    
+    padding: 0;
+    margin: 0;
+}
+
+.branches > .branch-node {
+    margin-left: 2rem;
+}
+
+.branches > li {
+    position: relative;
+    
+    list-style: none;
+    
+    width: fit-content;
+    min-height: 4rem;
+    line-height: 3rem;
+    
+    margin-left: 2rem;
+    padding-left: 3rem;
+}
+</style>
 <body>
-    <div class="progress-section" data-aos="fade-left" data-aos-once="true">
-      
-      
-    
-        <div class="task-progress">
-          <p>
-            <span>36/100</span>
-          </p>
-          <progress class="progress progress1" max="100" value="36"></progress>
+    <div id="my-tree-view" class="tree-view">
+        <div class="branch-node">
+            <div class="branch-title">Food</div>
+            <ul class="branches">
+                <div class="branch-node">
+                    <div class="branch-title">Burgers</div>
+                    <ul class="branches">
+                        <li>Hamburger</li>
+                        <li>Cheeseburger</li>
+                        <li>Chili Cheeseburger</li>
+                        <li>Turkey Burger</li>
+                    </ul>
+                </div>
+                
+                <div class="branch-node">
+                    <div class="branch-title">Pizza</div>
+                    <ul class="branches">
+                        <li>Cheese</li>
+                        <li>Pepperoni</li>
+                        <li>Hawaiian</li>
+                        <li>Vegetarian</li>
+                    </ul>
+                </div>
+                
+                <div class="branch-node">
+                    <div class="branch-title">Soup</div>
+                    <ul class="branches">
+                        <li>Beef Stew</li>
+                        <li>Chicken Noodle</li>
+                        <li>Chicken and Dumplings</li>
+                        <li>Tomato</li>
+                    </ul>
+                </div>
+            </ul>
         </div>
-        <div class="task-progress">
-          <p>
-            <span>100/1000</span>
-          </p>
-          <progress class="progress progress3" max="100" value="10"></progress>
-        </div>
-      </div>
+       
+    </div>
+    <script>
+        function hasClass(element, className)
+{
+    return element.classList.contains(className);
+}
+
+function treeView(element)
+{
+    element.addEventListener("click", (e) => {
+        let target = e.target;
+       
+        console.log(target);
+        
+        if(hasClass(target, "branch-node"))
+            target.classList.toggle("open");
+        else if(hasClass(target, "branch-title"))
+            target.parentNode.classList.toggle("open");
+    });
+}
+
+var myTreeView = document.getElementById("my-tree-view");
+
+treeView(myTreeView);
+    </script>
 </body>
 </html>
