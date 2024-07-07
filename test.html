@@ -6,187 +6,319 @@
     <title>Document</title>
 </head>
 <style>
-    :root {
-    font-size: 14px;
+    body{
+        background-color: black;
+    }
+.boxs{
+max-width: 400px;
+overflow-x: auto;
+display: flex;
+flex-direction: column;
+gap: 10px;
+align-items: end;
 }
-
-.tree-view {
-    position: relative;
-    
+.manBox{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  
+}
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: white;
+}
+.direc{
+    width: 18px;
+   height: 18px;
+border: 1px dashed white;
+border-radius: 50%;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 10px;
+}
+.box{
+    background-color: red;
     display: flex;
     flex-direction: column;
+    border-radius: 6px;
+    padding: 0 10px;
     
-    width: max-content;
-    
-    font-size: 1.25rem;
-    
-    padding-left: 1rem;
-    
-    user-select: none;
 }
-
-.branch-node {
-    position: relative;
-    
-    padding-left: 2rem;
-    
-    cursor: pointer;
+.boxinfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+.box p{
+    font-size: 10px;
 
-.branch-node::before, .branches > ::before {
-    content: "";
-    
-    position: absolute;
-    
-    left: -0.5rem;
-    top: 1.5rem;
-    
-    width: 3rem;
-    
-    border-left: 2px solid black;
-    border-top: 2px solid black;
-}
-
-.branch-node:not(:last-child)::before, .branches > :not(:last-child)::before {
-    height: 100%;
-}
-
-.branch-node:last-child::before, .branches > :last-child::before {
-    border-top: 0;
-    border-bottom: 2px solid black;
-}
-
-:not(.tree-view) > .branch-node:first-child::after, .branches > :first-child::after {
-    content: "";
-    
-    position: absolute;
-    
-    left: -0.5rem;
-    top: -1.5rem;
-    
-    height: 3rem;
-    
-    border-left: 2px solid black;
-}
-
-.branch-title {
-    position: relative;
-    
-    display: list-item;
-    list-style: none;
-    
-    width: max-content;
-    height: 3rem;
-    line-height: 3rem;
-    
-    padding-left: 3rem;
-    padding-right: 1rem;
-    padding-bottom: 1.5rem;
-}
-
-.branch-title::before {
-    content: "►";
-    
-    position: absolute;
-    
-    left: 1rem;
-    
-    margin-right: 1rem;    
-}
-
-.branch-node.open > .branch-title::before {
-    transform: rotate(90deg);
-}
-
-.branch-node.open > .branches {
-    display: initial;
-}
-
-.branches {
-    display: none;
-    
-    padding: 0;
-    margin: 0;
-}
-
-.branches > .branch-node {
-    margin-left: 2rem;
-}
-
-.branches > li {
-    position: relative;
-    
-    list-style: none;
-    
-    width: fit-content;
-    min-height: 4rem;
-    line-height: 3rem;
-    
-    margin-left: 2rem;
-    padding-left: 3rem;
 }
 </style>
 <body>
-    <div id="my-tree-view" class="tree-view">
-        <div class="branch-node">
-            <div class="branch-title">Food</div>
-            <ul class="branches">
-                <div class="branch-node">
-                    <div class="branch-title">Burgers</div>
-                    <ul class="branches">
-                        <li>Hamburger</li>
-                        <li>Cheeseburger</li>
-                        <li>Chili Cheeseburger</li>
-                        <li>Turkey Burger</li>
-                    </ul>
-                </div>
-                
-                <div class="branch-node">
-                    <div class="branch-title">Pizza</div>
-                    <ul class="branches">
-                        <li>Cheese</li>
-                        <li>Pepperoni</li>
-                        <li>Hawaiian</li>
-                        <li>Vegetarian</li>
-                    </ul>
-                </div>
-                
-                <div class="branch-node">
-                    <div class="branch-title">Soup</div>
-                    <ul class="branches">
-                        <li>Beef Stew</li>
-                        <li>Chicken Noodle</li>
-                        <li>Chicken and Dumplings</li>
-                        <li>Tomato</li>
-                    </ul>
-                </div>
-            </ul>
-        </div>
+    <div class="boxs">
+        <div class="manBox firstMainBox">
+             <p class="direc"><i class="fas fa-chevron-down"></i></p>
+             <p class="line"></p>
+             <div class="box">
+                 <p>0x9FCknxSsLfFDzFdn75Xgqx95sDp38inxSsLfFDzFdn75X</p>
+                 <div class="boxinfo">
+                     <div class="info">
+                         <p>level</p>
+                         <p>sharar</p>
+                     </div>
+                     <div class="info">
+                         <p>revenue</p>
+                         <p>0.0</p>
+                     </div>
+                     <div class="info">
+                         <p>invested : $</p>
+                         <p>0.0</p>
+                     </div>
+                     <div class="info">
+                         <p>created: </p>
+                         <p>14.45</p>
+                     </div>
+                 </div>
+             </div>
+             
+         </div> 
+        <div class="manBox firstMainBox">
+             <p class="direc"><i class="fas fa-chevron-down"></i></p>
+             <p class="line"></p>
+             <div class="box">
+                 <p>0x9FCknxSsLfFDzFdn75Xgqx95sDp38inxSsLfFDzFdn75X</p>
+                 <div class="boxinfo">
+                     <div class="info">
+                         <p>level</p>
+                         <p>sharar</p>
+                     </div>
+                     <div class="info">
+                         <p>revenue</p>
+                         <p>0.0</p>
+                     </div>
+                     <div class="info">
+                         <p>invested : $</p>
+                         <p>0.0</p>
+                     </div>
+                     <div class="info">
+                         <p>created: </p>
+                         <p>14.45</p>
+                     </div>
+                 </div>
+             </div>
+             
+         </div> 
        
-    </div>
+       <!-- <div class="manBox manBox2 secondMainBox">
+             <p class="direc"><i class="fas fa-chevron-down"></i></p>
+             <div class="box">
+                 <p>0x9FCknxSsLfFDzFdn75Xgqx95sDp38inxSsLfFDzFdn75X</p>
+                 <div class="boxinfo">
+                     <div class="info">
+                         <p>level</p>
+                         <p>sharar</p>
+                     </div>
+                     <div class="info">
+                         <p>revenue</p>
+                         <p>0.0</p>
+                     </div>
+                     <div class="info">
+                         <p>invested : $</p>
+                         <p>0.0</p>
+                     </div>
+                     <div class="info">
+                         <p>created: </p>
+                         <p>14.45</p>
+                     </div>
+                 </div>
+             </div>
+             
+         </div>
+         <div class="manBox manBox2 box2Cust">
+             <p class="direc"></p>
+             <div class="box">
+                 <p>0x9FCknxSsLfFDzFdn75Xgqx95sDp38inxSsLfFDzFdn75X</p>
+                 <div class="boxinfo">
+                     <div class="info">
+                         <p>level</p>
+                         <p>sharar</p>
+                     </div>
+                     <div class="info">
+                         <p>revenue</p>
+                         <p>0.0</p>
+                     </div>
+                     <div class="info">
+                         <p>invested : $</p>
+                         <p>0.0</p>
+                     </div>
+                     <div class="info">
+                         <p>created: </p>
+                         <p>14.45</p>
+                     </div>
+                 </div>
+             </div>
+             
+         </div>
+         <div class="manBox manBox2 secondMainBox2">
+             <p class="direc dircgreen"><i class="fas fa-chevron-down"></i></p>
+             <div class="box">
+                 <p>0x9FCknxSsLfFDzFdn75Xgqx95sDp38inxSsLfFDzFdn75X</p>
+                 <div class="boxinfo">
+                     <div class="info">
+                         <p>level</p>
+                         <p>sharar</p>
+                     </div>
+                     <div class="info">
+                         <p>revenue</p>
+                         <p>0.0</p>
+                     </div>
+                     <div class="info">
+                         <p>invested : $</p>
+                         <p>0.0</p>
+                     </div>
+                     <div class="info">
+                         <p>created: </p>
+                         <p>14.45</p>
+                     </div>
+                 </div>
+             </div>
+             
+         </div>
+         <div class="manBox manBox3 boxcustom3 secondMainBox">
+             <p class="direc boxcustom3dir"><i class="fas fa-chevron-down"></i></p>
+             <div class="box">
+                 <p>0x9FCknxSsLfFDzFdn75Xgqx95sDp38inxSsLfFDzFdn75X</p>
+                 <div class="boxinfo">
+                     <div class="info">
+                         <p>level</p>
+                         <p>sharar</p>
+                     </div>
+                     <div class="info">
+                         <p>revenue</p>
+                         <p>0.0</p>
+                     </div>
+                     <div class="info">
+                         <p>invested : $</p>
+                         <p>0.0</p>
+                     </div>
+                     <div class="info">
+                         <p>created: </p>
+                         <p>14.45</p>
+                     </div>
+                 </div>
+             </div>
+             
+         </div>
+         <div class="manBox manBox3">
+             <p class="direc boxcustom4dir"><i class="fas fa-chevron-right"></i></p>
+             <div class="box">
+                 <p>0x9FCknxSsLfFDzFdn75Xgqx95sDp38inxSsLfFDzFdn75X</p>
+                 <div class="boxinfo">
+                     <div class="info">
+                         <p>level</p>
+                         <p>sharar</p>
+                     </div>
+                     <div class="info">
+                         <p>revenue</p>
+                         <p>0.0</p>
+                     </div>
+                     <div class="info">
+                         <p>invested : $</p>
+                         <p>0.0</p>
+                     </div>
+                     <div class="info">
+                         <p>created: </p>
+                         <p>14.45</p>
+                     </div>
+                 </div>
+             </div>
+             
+         </div>
+         <div class="manBox manBox3">
+             <p class="direc boxcustom5dir"><i class="fas fa-chevron-right"></i></p>
+             <div class="box">
+                 <p>0x9FCknxSsLfFDzFdn75Xgqx95sDp38inxSsLfFDzFdn75X</p>
+                 <div class="boxinfo">
+                     <div class="info">
+                         <p>level</p>
+                         <p>sharar</p>
+                     </div>
+                     <div class="info">
+                         <p>revenue</p>
+                         <p>0.0</p>
+                     </div>
+                     <div class="info">
+                         <p>invested : $</p>
+                         <p>0.0</p>
+                     </div>
+                     <div class="info">
+                         <p>created: </p>
+                         <p>14.45</p>
+                     </div>
+                 </div>
+             </div>
+             
+         </div>
+         <div class="manBox manBox3 boxcustom3">
+             <p class="direc boxcustom6dir"><i class="fas fa-chevron-right"></i></p>
+             <div class="box">
+                 <p>0x9FCknxSsLfFDzFdn75Xgqx95sDp38inxSsLfFDzFdn75X</p>
+                 <div class="boxinfo">
+                     <div class="info">
+                         <p>level</p>
+                         <p>sharar</p>
+                     </div>
+                     <div class="info">
+                         <p>revenue</p>
+                         <p>0.0</p>
+                     </div>
+                     <div class="info">
+                         <p>invested : $</p>
+                         <p>0.0</p>
+                     </div>
+                     <div class="info">
+                         <p>created: </p>
+                         <p>14.45</p>
+                     </div>
+                 </div>
+             </div>
+             
+         </div>
+         <div class="manBox manBox3">
+             <p class="direc boxcustom7dir"><i class="fas fa-chevron-right"></i></p>
+             <div class="box">
+                 <p>0x9FCknxSsLfFDzFdn75Xgqx95sDp38inxSsLfFDzFdn75X</p>
+                 <div class="boxinfo">
+                     <div class="info">
+                         <p>level</p>
+                         <p>sharar</p>
+                     </div>
+                     <div class="info">
+                         <p>revenue</p>
+                         <p>0.0</p>
+                     </div>
+                     <div class="info">
+                         <p>invested : $</p>
+                         <p>0.0</p>
+                     </div>
+                     <div class="info">
+                         <p>created: </p>
+                         <p>14.45</p>
+                     </div>
+                 </div>
+             </div>
+             
+         </div>  -->
+     </div>
+
+   </body>
+
+
     <script>
-        function hasClass(element, className)
-{
-    return element.classList.contains(className);
-}
-
-function treeView(element)
-{
-    element.addEventListener("click", (e) => {
-        let target = e.target;
-       
-        console.log(target);
-        
-        if(hasClass(target, "branch-node"))
-            target.classList.toggle("open");
-        else if(hasClass(target, "branch-title"))
-            target.parentNode.classList.toggle("open");
-    });
-}
-
-var myTreeView = document.getElementById("my-tree-view");
-
-treeView(myTreeView);
+  
     </script>
 </body>
 </html>

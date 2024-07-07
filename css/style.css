@@ -21,7 +21,7 @@ body{
     background-color: #181025;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+   
 }
 ul{
     list-style:none;
@@ -537,7 +537,7 @@ font-size: 8px;
    background-color: #241c31;
    margin-top: 30px;
    position: relative;
-   padding-bottom: 50px;
+   /* padding-bottom: 50px; */
    overflow-x: hidden;
    overflow-y: hidden;
  }
@@ -560,14 +560,212 @@ color: #8c8597;
 font-size: 12px;
 font-weight: 700;
  }
+ .secarchAddress .boxcontain{
+   max-height: 600px;
+   overflow-y: auto;
+   min-height: 185px;
+   position: relative;
+ }
+ .secarchAddress .rondomLine{
+   display: block;
+   position: absolute;
+   width: 10%;
+   height: 1px;
+   background-color: white;
+   top: 70%;
+   left: 8%;
+ }
  .secarchAddress .boxs{
    display: flex;
    flex-direction: column;
    gap: 4px;
   position: relative;
   align-items: end;
+  overflow-x: auto;
+  width: 100%;
+  padding-left: 15px;
+
  }
- .secarchAddress .manBox.open{
+
+ 
+ .secarchAddress .manBox{
+   display: flex;
+   justify-content: end;
+   align-items: center;
+  /* justify-content: space-between; */
+
+  /* gap: 5%; */
+  width: 100%;
+  overflow-x: auto;
+ }
+ .secarchAddress .manBox .box{
+   background-color: #fdc53a;
+   display: flex;
+   flex-direction: column;
+padding: 10px;
+gap: 10px;
+border-radius: 7px;
+z-index: 112;
+overflow-x: auto;
+ }
+ .secarchAddress .boxs .manBox .line{
+   width: 15%;
+   height: 1px;
+   background-color: white;
+   display: block;
+ }
+ 
+
+ .secarchAddress .manBox .direc{
+  width: 5%;
+   height: 18px;
+border: 1px dashed white;
+border-radius: 50%;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 10px;
+background-color: white;
+ }
+ .secarchAddress .manBox .direc::after{
+   content: "";
+   position: absolute;
+   width: 1px;
+   height: calc(100% - 40px);
+   background-color: white;
+   top: calc(100% - 100% + 53px);
+ }
+
+ .secarchAddress .manBox .direc i{
+ font-size: 13px;
+ color: #181025;
+ z-index: 112;
+ }
+ .secarchAddress .manBox .box p{
+   margin: 0;
+   font-size: 14px;
+   font-weight: 700;
+ }
+ .secarchAddress .manBox .box .boxinfo{
+display: flex;
+justify-content: space-between;
+align-items: baseline;
+text-transform: capitalize;
+width: 300px;
+
+ }
+ .secarchAddress .manBox .box .boxinfo .info{
+  
+ }
+ .secarchAddress .manBox2{
+   /* margin-left: 25px; */
+   /* gap: 7%; */
+   width: 90%;
+ }
+ .secarchAddress .boxs .box2Cust{
+   width: calc(90% - 4%);
+ }
+ .secarchAddress .manBox2 .direc::after{
+   top:  calc(100% - 100% + 136px);
+   /* height: 20%; */
+   height:  calc(100% - 100% + 114px);;
+ }
+
+
+ .secarchAddress .manBox2 .box{
+   background-color: #32fc84;
+   
+  
+ }
+
+ .secarchAddress .box2Cust .box{
+background-color: #b9afc8;
+width: 100%;
+ }
+ .secarchAddress .box2Cust .direc{
+height: 0;
+width: 0;
+border: none;
+ }
+
+ .secarchAddress .box2Cust .direc::after{
+  display: none;
+ }
+ .secarchAddress .manBox2  .dircgreen::after{
+   height: calc(100% - 240px);
+   top: calc(100% - 100% + 240px);
+  }
+ .secarchAddress .manBox3{
+ width: 80%;
+ }
+ .secarchAddress .manBox3 .box{
+   background-color: #32fc84;
+ 
+ }
+ .secarchAddress .boxcustom3 .box{
+   background-color: #b9afc8;
+ }
+
+
+.secarchAddress .boxcustom3 .boxcustom3dir::after{
+
+   height: calc(100% - 400px);
+   top: calc(100% - 100% + 403px);
+}
+.secarchAddress .manBox3 .boxcustom4dir::after{
+display: none;
+   height: calc(100% - 100% + 40px);
+
+   top: calc(100% - 100% + 363px);
+}
+.secarchAddress .manBox3 .boxcustom5dir::before{
+   content: "";
+   width: 10%;
+   height: 1px;
+   background-color: white;
+   position: absolute;
+   left: calc(20% - 8px);
+
+
+}
+.secarchAddress .manBox3 .boxcustom5dir::after{
+   display: none;
+  
+   height: calc(100% - 100% + 40px);
+
+   top: calc(100% - 100% + 423px);
+}
+.secarchAddress .manBox3 .boxcustom6dir::after{
+   display: none;
+   
+   height: calc(100% - 100% + 40px);
+
+   top: calc(100% - 100% + 483px);
+}
+.secarchAddress .manBox3 .boxcustom7dir::after{
+   display: none;
+   height:calc(100% - 543px);
+
+   top: calc(100% - 100% + 543px);
+}
+
+
+/* openclass */
+.secarchAddress .rondomLine.open,.secarchAddress .rondomLine.open1,.secarchAddress .rondomLine.open2,.secarchAddress .rondomLine.open3,.secarchAddress .rondomLine.open4{
+   display: none;
+}
+
+.secarchAddress .manBox3 .boxcustom5dir.open::before,
+.secarchAddress .manBox3 .boxcustom5dir.open2::before
+.secarchAddress .manBox3 .boxcustom5dir.open3::before
+.secarchAddress .manBox3 .boxcustom5dir.open4::before
+
+
+{
+   display: none;
+}
+.secarchAddress .manBox.open{
    display: none !important;
  }
  .secarchAddress .manBox .direc.open::after{
@@ -630,163 +828,11 @@ transform: rotate(90deg);
    height: 35%;
 
 }
-.secarchAddress .manBox2 .dircgreen.open4::after{
+/* .secarchAddress .manBox2 .dircgreen.open4::after{
    top: 74.5%;
    height: 100%;
-  }
- .secarchAddress .manBox{
-   display: flex;
-   justify-content: end;
-   align-items: center;
-  justify-content: space-between;
-  padding-left: 15px;
-  /* gap: 5%; */
-  width: 100%;
- }
- .secarchAddress .manBox .box{
-   background-color: #fdc53a;
-   display: flex;
-   flex-direction: column;
-padding: 10px;
-gap: 10px;
-border-radius: 7px;
-width: 90%;
-z-index: 112;
- }
- .secarchAddress .manBox .direc{
-  width: 18px;
-   height: 18px;
-border: 1px dashed white;
-border-radius: 50%;
-color: white;
-display: flex;
-justify-content: center;
-align-items: center;
- }
- .secarchAddress .manBox .direc::after{
-   content: "";
-   position: absolute;
-   width: 1px;
-   height: 100%;
-   background-color: white;
-   bottom: -7.5%;
- }
- .secarchAddress .manBox .direc::before{
-   content: "";
-   /* width: 5%; */
-   height: 1px;
-   position: absolute;
-   background-color: white;
-   left: 10.5%;
-   /* width: calc(10% - 18px); */
-   width: 100% !important;
- }
- .secarchAddress .manBox .direc i{
- font-size: 10px;
- }
- .secarchAddress .manBox .box p{
-   margin: 0;
-   font-size: 9px;
-   font-weight: 700;
- }
- .secarchAddress .manBox .box .boxinfo{
-display: flex;
-justify-content: space-between;
-align-items: center;
-text-transform: capitalize;
- }
- .secarchAddress .manBox2{
-   /* margin-left: 25px; */
-   /* gap: 7%; */
-   width: 95%;
- }
- .secarchAddress .manBox2 .direc::after{
-   top: 19.5%;
-   height: 20%;
- }
- .secarchAddress .manBox2 .direc::before{
-   left: 15%;
-  
-    width: calc(12% - 18px);;
- }
-
- .secarchAddress .manBox2 .box{
-   background-color: #32fc84;
-   width: 88%;
-  
- }
- .secarchAddress .manBox2 .box p{
-   
-   font-size: 8px;
- }
- .secarchAddress .box2Cust .box{
-background-color: #b9afc8;
-/* width: 90%; */
- }
- .secarchAddress .box2Cust .direc{
-height: 0;
-width: 0;
-border: none;
- }
- .secarchAddress .box2Cust .direc::before{
-   left: 13%;
-   /* width: 11%; */
-   width: calc(10% - 8px);
- }
- .secarchAddress .box2Cust .direc::after{
-  display: none;
- }
- .secarchAddress .manBox2  .dircgreen::after{
-   height: 100%;
-   top: 43%;
-  }
- .secarchAddress .manBox3{
-   width: 90%;
- }
- .secarchAddress .manBox3 .box{
-   background-color: #32fc84;
-   width: 85%;
- }
- .secarchAddress .boxcustom3 .box{
-   background-color: #b9afc8;
- }
- .secarchAddress .manBox3  .box p{
-   font-size: 7px;
- }
- .secarchAddress .manBox3  .direc::before{
-  left: 20%;
- width: calc(15% - 18px)
- }
-.secarchAddress .boxcustom3 .boxcustom3dir::after{
-
-   height: 7.5%;
-
-   top: 54%;
-}
-.secarchAddress .manBox3 .boxcustom4dir::after{
-
-   height: 7.5%;
-
-   top: 64.5%;
-}
-.secarchAddress .manBox3 .boxcustom5dir::after{
-
-   height: 7.5%;
-
-   top: 75.5%;
-}
-.secarchAddress .manBox3 .boxcustom6dir::after{
-
-   height: 7.5%;
-
-   top: 86%;
-}
-.secarchAddress .manBox3 .boxcustom7dir::after{
-
-   height: 10.5%;
-
-   top: 96.5%;
-}
+  } */
+/* openclass */
  /* secarchAddress */
 
 
@@ -1004,14 +1050,17 @@ font-size: 8px;
 font-size: 15px;
 
  }
+ .secarchAddress .manBox3 .boxcustom5dir::before{
  
+   left: calc(20% - 14px);
+
+}
+.secarchAddress .rondomLine{
+   left: 6%;
+}
+/*  
  .secarchAddress .manBox{
-   /* display: flex;
-   justify-content: end;
-   align-items: center;
-  justify-content: space-between;
-  padding-left: 15px; */
-  /* gap: 7%; */
+  
  }
  .secarchAddress .manBox .box{
    background-color: #fdc53a;
@@ -1037,7 +1086,7 @@ align-items: center;
    height: 1px;
    position: absolute;
    background-color: white;
-   /* left: 9%; */
+  
    left: calc(10% - 4px);
  }
  .secarchAddress .manBox .direc i{
@@ -1054,12 +1103,9 @@ justify-content: space-between;
 align-items: center;
 text-transform: capitalize;
  }
- .secarchAddress .manBox2{
-   /* margin-left: 25px; */
-   /* gap: 7%; */
- }
+
  .secarchAddress .manBox2 .direc::before{
-   /* left: 16%; */
+ 
    left: calc(12% + 6px);
  }
  .secarchAddress .manBox2 .direc::after {
@@ -1068,7 +1114,7 @@ text-transform: capitalize;
 }
  .secarchAddress .manBox2 .box{
    background-color: #32fc84;
-   /* width: 80%; */
+  
   
  }
  .secarchAddress .manBox2 .box p{
@@ -1108,7 +1154,7 @@ text-transform: capitalize;
     .secarchAddress .manBox3  .direc::before{
      left: 24%;
      left: calc(15% + 15px);
-     /* ddddd */
+ 
     }
    .secarchAddress .boxcustom3 .boxcustom3dir::after{
    
@@ -1139,7 +1185,7 @@ text-transform: capitalize;
       height: 10.5%;
    
       top: 96.5%;
-   }
+   } */
 }
 
 /* responsive */

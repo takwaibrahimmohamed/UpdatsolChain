@@ -187,19 +187,22 @@ charthover.forEach(element => {
 // expand
 
 const mainbox=document.querySelectorAll(".secarchAddress .manBox")
+const rondomline=document.querySelector(".secarchAddress .rondomLine")
 
 
 const toggle = ()=>{
  
+  rondomline.classList.toggle("open")
   mainbox.forEach((ele,i)=>{
-    
+  
     if(ele.classList.contains("firstMainBox")){
       ele.children[0].classList.toggle("open")
+    
     }
     if(!ele.classList.contains("firstMainBox")){
       // console.log(ele)
      ele.classList.toggle("open")
-    
+     rondomline.classList.toggle("open")
     }
      
   
@@ -208,20 +211,15 @@ const toggle = ()=>{
 }
 
 const toggle1 = ()=>{
- 
+
   mainbox.forEach((ele,i)=>{
-    if(ele.classList.contains("firstMainBox")){
-      console.log(ele.children[0].classList)
-      if(ele.children[0].classList.contains("open2") &&ele.children[0].classList.contains("open3")){
-        console.log("hel")
-      }
-    }
-   
+  
   if(ele.classList.contains("secondMainBox")){
     ele.children[0].classList.toggle("open2")
   }
   if(ele.classList.contains("firstMainBox")){
     ele.children[0].classList.toggle("open2")
+    rondomline.classList.toggle("open2")
     // ele.children[0].classList.toggle("open")
   }
     if(!ele.classList.contains("secondMainBox")&&!ele.classList.contains("firstMainBox")){
@@ -236,7 +234,7 @@ const toggle1 = ()=>{
 const toggle2 = ()=>{
  
   mainbox.forEach((ele,i)=>{
- 
+    
   if(ele.classList.contains("secondMainBox2")){
     ele.children[0].classList.toggle("open3")
     // console.log(ele.children[0])
@@ -246,7 +244,7 @@ const toggle2 = ()=>{
   }
   if(ele.classList.contains("firstMainBox")){
     ele.children[0].classList.toggle("open3")
-   
+    rondomline.classList.toggle("open3")
   }
 
     if(!ele.classList.contains("secondMainBox2")){
@@ -259,9 +257,9 @@ const toggle2 = ()=>{
   })
 }
 const toggle3 = ()=>{
- 
+  
   mainbox.forEach((ele,i)=>{
- 
+    
   if(ele.classList.contains("secondMainBox")){
     ele.children[0].classList.toggle("open4")
     console.log(ele.children[0])
@@ -271,7 +269,7 @@ const toggle3 = ()=>{
   }
   if(ele.classList.contains("firstMainBox")){
     ele.children[0].classList.toggle("open4")
-   
+    rondomline.classList.toggle("open4")
   }
   if(ele.classList.contains("secondMainBox3")){
     ele.children[0].classList.toggle("open4")
@@ -287,6 +285,7 @@ const toggle3 = ()=>{
   
   })
 }
+
 mainbox[0].addEventListener("click",toggle)
 mainbox[1].addEventListener("click",toggle1)
 mainbox[3].addEventListener("click",toggle2)
