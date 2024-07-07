@@ -573,7 +573,7 @@ font-weight: 700;
    height: 1px;
    background-color: white;
    top: 70%;
-   left: 8%;
+   left: calc(100% - 100% + 25px);
  }
  .secarchAddress .boxs{
    display: flex;
@@ -710,8 +710,8 @@ border: none;
 
 .secarchAddress .boxcustom3 .boxcustom3dir::after{
 
-   height: calc(100% - 400px);
-   top: calc(100% - 100% + 403px);
+   height: calc(100% - 485px);
+   top: calc(100% - 100% + 390px);
 }
 .secarchAddress .manBox3 .boxcustom4dir::after{
 display: none;
@@ -1056,7 +1056,8 @@ font-size: 15px;
 
 }
 .secarchAddress .rondomLine{
-   left: 6%;
+   left:calc(100% - 100% + 25px);
+   width: 10%;
 }
 /*  
  .secarchAddress .manBox{
