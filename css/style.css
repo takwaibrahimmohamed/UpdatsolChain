@@ -710,7 +710,7 @@ border: none;
 
 .secarchAddress .boxcustom3 .boxcustom3dir::after{
 
-   height: calc(100% - 370px);
+   height:calc(100% - 50% + 20px);
    top: calc(100% - 100% + 383px);
 }
 .secarchAddress .manBox3 .boxcustom4dir::after{
