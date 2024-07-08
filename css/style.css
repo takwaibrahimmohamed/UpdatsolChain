@@ -569,7 +569,7 @@ font-weight: 700;
  .secarchAddress .rondomLine{
    display: block;
    position: absolute;
-   width: 10%;
+   width: 7%;
    height: 1px;
    background-color: white;
    top: 70%;
@@ -582,7 +582,7 @@ font-weight: 700;
   position: relative;
   align-items: end;
   overflow-x: auto;
-  width: 100%;
+  width: 180%;
   padding-left: 15px;
 
  }
@@ -596,7 +596,7 @@ font-weight: 700;
 
   /* gap: 5%; */
   width: 100%;
-  overflow-x: auto;
+  /* overflow-x: auto; */
  }
  .secarchAddress .manBox .box{
    background-color: #fdc53a;
@@ -606,7 +606,8 @@ padding: 10px;
 gap: 10px;
 border-radius: 7px;
 z-index: 112;
-overflow-x: auto;
+width: 100%;
+/* overflow-x: auto; */
  }
  .secarchAddress .boxs .manBox .line{
    width: 15%;
@@ -625,7 +626,7 @@ color: white;
 display: flex;
 justify-content: center;
 align-items: center;
-padding: 10px;
+padding: 10px 0;
 background-color: white;
  }
  .secarchAddress .manBox .direc::after{
@@ -646,13 +647,16 @@ background-color: white;
    margin: 0;
    font-size: 14px;
    font-weight: 700;
+   width: 100%;
+   word-wrap:break-word ;
  }
  .secarchAddress .manBox .box .boxinfo{
 display: flex;
-justify-content: space-between;
+justify-content: start;
+gap: 20px;
 align-items: baseline;
 text-transform: capitalize;
-width: 300px;
+/* width: 300px; */
 
  }
  .secarchAddress .manBox .box .boxinfo .info{
@@ -661,10 +665,10 @@ width: 300px;
  .secarchAddress .manBox2{
    /* margin-left: 25px; */
    /* gap: 7%; */
-   width: 90%;
+   width: 96%;
  }
  .secarchAddress .boxs .box2Cust{
-   width: calc(90% - 4%);
+   width: calc(96% - 4% + 10px);
  }
  .secarchAddress .manBox2 .direc::after{
    top:  calc(100% - 100% + 136px);
@@ -675,13 +679,13 @@ width: 300px;
 
  .secarchAddress .manBox2 .box{
    background-color: #32fc84;
-   
+   width: 100%;
   
  }
 
  .secarchAddress .box2Cust .box{
 background-color: #b9afc8;
-width: 100%;
+width: 85%;
  }
  .secarchAddress .box2Cust .direc{
 height: 0;
@@ -697,11 +701,11 @@ border: none;
    top: calc(100% - 100% + 240px);
   }
  .secarchAddress .manBox3{
- width: 80%;
+ width: 85%;
  }
  .secarchAddress .manBox3 .box{
    background-color: #32fc84;
- 
+ width: 100%;
  }
  .secarchAddress .boxcustom3 .box{
    background-color: #b9afc8;
@@ -1050,6 +1054,9 @@ font-size: 8px;
 font-size: 15px;
 
  }
+ .secarchAddress .boxs{
+   width: 155%;
+ }
  .secarchAddress .manBox3 .boxcustom5dir::before{
  
    left: calc(20% - 14px);
@@ -1057,7 +1064,7 @@ font-size: 15px;
 }
 .secarchAddress .rondomLine{
    left:calc(100% - 100% + 25px);
-   width: 10%;
+   width: 7%;
 }
 /*  
  .secarchAddress .manBox{
