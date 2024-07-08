@@ -626,14 +626,14 @@ color: white;
 display: flex;
 justify-content: center;
 align-items: center;
-padding: 10px 0;
+padding:12px 10px;
 background-color: white;
  }
  .secarchAddress .manBox .direc::after{
    content: "";
    position: absolute;
    width: 1px;
-   height: calc(100% - 40px);
+   height: calc(100% - 30px);
    background-color: white;
    top: calc(100% - 100% + 53px);
  }
@@ -671,9 +671,11 @@ text-transform: capitalize;
    width: calc(96% - 4% + 10px);
  }
  .secarchAddress .manBox2 .direc::after{
-   top:  calc(100% - 100% + 136px);
+   top:  calc(100% - 100% + 118px);
    /* height: 20%; */
-   height:  calc(100% - 100% + 114px);;
+   /* height:  calc(100% - 100% + 114px);; */
+   height:  calc(100% - 90px);
+   /* background-color: red; */
  }
 
 
@@ -697,8 +699,9 @@ border: none;
   display: none;
  }
  .secarchAddress .manBox2  .dircgreen::after{
-   height: calc(100% - 240px);
-   top: calc(100% - 100% + 240px);
+   /* height: calc(100% - 240px); */
+   /* top: calc(100% - 100% + 240px); */
+   /* width: 10px; */
   }
  .secarchAddress .manBox3{
  width: 85%;
@@ -714,8 +717,8 @@ border: none;
 
 .secarchAddress .boxcustom3 .boxcustom3dir::after{
 
-   height:calc(100% - 50% + 20px);
-   top: calc(100% - 100% + 383px);
+   height:calc(100% - 350px);
+   top: calc(100% - 100% + 381px);
 }
 .secarchAddress .manBox3 .boxcustom4dir::after{
 display: none;
